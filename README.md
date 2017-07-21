@@ -1,2 +1,1 @@
-# golang-mcedit
-Go Lang Syntax Highlight File for Mcedit
+# The Go Programming Language Syntax Highligh for MCedit
