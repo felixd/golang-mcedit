@@ -1,0 +1,117 @@
+# Original file was found on:
+# http://go-lang.cat-v.org/text-editors/mcedit/
+
+# Contributed by Szabolcs Nagy.
+# Keywords, string literals and operators are highlighted (‘<-’ has different color).
+# Color scheme is optimized for black background.
+
+context default
+# keywords
+	keyword whole break brightblue
+  keyword whole case brightblue
+	keyword whole chan brightblue
+	keyword whole const brightblue
+	keyword whole continue brightblue
+	keyword whole default brightblue
+	keyword whole defer brightblue
+	keyword whole else brightblue
+	keyword whole fallthrough brightblue
+	keyword whole for brightblue
+	keyword whole func brightblue
+	keyword whole go brightblue
+	keyword whole goto brightblue
+	keyword whole if brightblue
+	keyword whole import brightblue
+	keyword whole interface brightblue
+	keyword whole map brightblue
+	keyword whole package brightblue
+	keyword whole range brightblue
+	keyword whole return brightblue
+	keyword whole select brightblue
+	keyword whole struct brightblue
+	keyword whole switch brightblue
+	keyword whole type brightblue
+	keyword whole var brightblue
+# builtin types
+	keyword whole uint8 yellow
+	keyword whole uint16 yellow
+	keyword whole uint32 yellow
+	keyword whole uint64 yellow
+	keyword whole int8 yellow
+	keyword whole int16 yellow
+	keyword whole int32 yellow
+	keyword whole int64 yellow
+	keyword whole float32 yellow
+	keyword whole float64 yellow
+	keyword whole byte yellow
+	keyword whole uint yellow
+	keyword whole int yellow
+	keyword whole float yellow
+	keyword whole uintptr yellow
+	keyword whole string yellow
+	keyword whole bool yellow
+# builtin functions
+	keyword whole nil brown
+	keyword whole true brown
+	keyword whole false brown
+	keyword whole iota brown
+	keyword whole cap brown
+	keyword whole close brown
+	keyword whole closed brown
+	keyword whole len brown
+	keyword whole make brown
+	keyword whole new brown
+	keyword whole panic brown
+	keyword whole panicln brown
+	keyword whole print brown
+	keyword whole println brown
+# special functions
+	keyword whole init brown
+	keyword whole main brown
+# comment chars
+	keyword /\* green
+	keyword \*/ green
+	keyword // green
+# punctuation, operator chars
+	keyword <- brightmagenta
+	keyword \+ brightcyan
+	keyword & brightcyan
+	keyword ( brightcyan
+	keyword ) brightcyan
+	keyword - brightcyan
+	keyword | brightcyan
+	keyword < brightcyan
+	keyword [ brightcyan
+	keyword ] brightcyan
+	keyword \* brightcyan
+	keyword ^ brightcyan
+	keyword > brightcyan
+	keyword { brightcyan
+	keyword } brightcyan
+	keyword / brightcyan
+	keyword = brightcyan
+	keyword , brightcyan
+	keyword ; brightcyan
+	keyword % brightcyan
+	keyword ! brightcyan
+	keyword . brightcyan
+	keyword : brightcyan
+
+# comment
+context exclusive /\* \*/ green
+context exclusive // \n green
+
+# char, raw string, string
+context ' ' gray
+	keyword \\\{abfnrtv\\'"\} green
+	keyword \\\{0123\}\{01234567\}\{01234567\} green
+	keyword \\x\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} green
+	keyword \\u\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} green
+	keyword \\U\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} green
+context ` ` blue
+context " " blue
+	keyword \\\{abfnrtv\\'"\} green
+	keyword \\\{0123\}\{01234567\}\{01234567\} green
+	keyword \\x\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} green
+	keyword \\u\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} green
+	keyword \\U\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\}\{0123456789abcdefABCDEF\} green
